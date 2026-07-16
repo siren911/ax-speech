@@ -537,10 +537,10 @@ h2{font-size:clamp(38px,4.2vw,66px);font-weight:800;line-height:1.25;letter-spac
   <div class="lbGrid">
     <div class="lbCard" data-step="2" aria-label="토큰 사용량 리더보드 재현">
       <div class="lbTitle"><span><span class="liveDot">●</span> TOKEN LEADERBOARD</span><span>이번 주 · 전사</span></div>
-      <div class="lbRow"><span class="rk">1</span><span class="nm"><b>개발1그룹 · 김OO 프로</b></span><span class="tk">98M</span><span class="lbBar"><i style="width:100%"></i></span></div>
-      <div class="lbRow"><span class="rk">2</span><span class="nm"><b>CS평가팀 · 박OO 프로</b></span><span class="tk">91M</span><span class="lbBar"><i style="width:93%"></i></span></div>
-      <div class="lbRow"><span class="rk">3</span><span class="nm">개발2그룹 · 이OO 프로</span><span class="tk">62M</span><span class="lbBar"><i style="width:63%"></i></span></div>
-      <div class="lbRow"><span class="rk">4</span><span class="nm">품질보증 · 최OO 프로</span><span class="tk">41M</span><span class="lbBar"><i style="width:42%"></i></span></div>
+      <div class="lbRow"><span class="rk">1</span><span class="nm"><b>품질실 · 간O탑 프로</b></span><span class="tk">98M</span><span class="lbBar"><i style="width:100%"></i></span></div>
+      <div class="lbRow"><span class="rk">2</span><span class="nm"><b>CS팀 · 이O욱 프로</b></span><span class="tk">91M</span><span class="lbBar"><i style="width:93%"></i></span></div>
+      <div class="lbRow"><span class="rk">3</span><span class="nm">개발품질팀 · 김O봉 프로</span><span class="tk">62M</span><span class="lbBar"><i style="width:63%"></i></span></div>
+      <div class="lbRow"><span class="rk">4</span><span class="nm">양산품질팀 · 조O훈 프로</span><span class="tk">41M</span><span class="lbBar"><i style="width:42%"></i></span></div>
       <div class="lbRow low"><span class="rk">247</span><span class="nm">?? 팀 · 익명의 그분</span><span class="tk">0.3M</span><span class="lbBar"><i style="width:2%"></i></span><span class="memo">→ 팀장 면담 예약됨</span></div>
     </div>
     <ul class="tokList">
@@ -647,6 +647,7 @@ h2{font-size:clamp(38px,4.2vw,66px);font-weight:800;line-height:1.25;letter-spac
       의사결정을 흔듭니다.
     </div>
   </div>
+  <p class="note" data-step="6">REF: 기술부채·인지부채·의도부채 3분류 — M.A. Storey, "From Technical Debt to Cognitive and Intent Debt", ACM Queue (2026) · 하용호 〈AI 시대의 전문성〉 (2026.6) 재인용</p>
 </section>
 
 <!-- ══════════════ 장면 · 사람의 메인 작업이 '검증'으로 바뀝니다 ══════════════ -->
@@ -1149,9 +1150,9 @@ hooks['s-ax'] = (()=>{
 
 /* ---------- 장면 6 (s-bills): 두 글자 전환 (임원→고객) ---------- */
 hooks['s-bills'] = {
-  extraSteps: 5,
+  extraSteps: 6,
   onStep(s){
-    /* 단계 4: 문장 등장(임원, 골드) / 단계 5: '고객'(레드)으로 전환 */
+    /* 단계 4: 문장 등장(임원, 골드) / 단계 5: '고객'(레드)으로 전환 / 단계 6: 출처 */
     document.getElementById('swapStage').classList.toggle('swapped', s>=5);
   },
   onEnter(){ document.getElementById('swapStage').classList.remove('swapped'); }
